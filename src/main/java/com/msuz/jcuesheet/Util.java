@@ -7,10 +7,10 @@
 package com.msuz.jcuesheet;
 
 public class Util {
-    // Lets us get the enum entry name from its value/string
+    // Takes a string as input and returns the enum with matching string value
     public static <T extends Enum<T>> T enumFromVal(Class<T> eenum, String value) {
         for (T e : eenum.getEnumConstants()) {
-            if (e.toString().equals(value))
+            if (e.name().equals(value))
                 return e;
         }
         return null;
